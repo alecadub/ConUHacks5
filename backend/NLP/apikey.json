@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "harmlessbuddy",
+  "private_key_id": "d056531b2ee3e0bd20f9831cebf2add2e1bfde34",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqeSmvzgrlJ174\niRrv09CEw36L2iAdluk/+i2nU0gbTEJF4F0N7Dlc1qxlL+QYknOlWCG8Ot7zPra+\nSRBjlDYGjlHTg3DNX24lXEYo8geBUtlFDmwnID2VWius++rqugwIyyfEJbTwQ30b\nWZx7UWTW6FVzi/xF8JKE3XO8cJeBxzCMfGus+dRmhQa7YWuQoNCFG2BTnEyVlDH1\nVpfSGZgaPDTZiBrqWQoyCDUjdgc5Hq1R7xZHWt1OUYxz9+T9Qk6udQr0Z6aC9VLO\njxhwq9KnKG7edAUlexIvUJV5fbZ5ukq17SUXtf9/dAhmox98pAfat36YWROblvVA\n5xITZbgzAgMBAAECggEAB79i9CD+oMSFzfDZPw4W23nRDgUXUZDyv9wcaA7iZ48z\nMd7NC91xC/WbtyuSh8VcKScUvWvFhzOR9Zr3ejcZr3mXYXAHV+Ye6ObFL4Y0bh24\nTymlI7AU7G1BL+bxGcLj2iB1ibYW/5ZpoK0VbgtYdGXxwEMb74fL+OrhoC5TzGuQ\nm2tDJ3U4jTztvDGYsFPfb8UNjLpm2jjgZ9S9IUxZez6hDnbLj02fU/49eGdNwhHh\nixJ17Mn1ClY2/Ed2JqvarGUjlrCVeftUPd3qibbBhYGaz67OFpZ0fXLlYom/ruiz\nGd3gPsUs170LcqqM8nkhReoaMddj7Cxa+BzezzIraQKBgQDXXeFBu5dX2my0nT/F\nLYDvm5RJ3vUVMiiHLZ5U86JSlnB9wTTuVj1goxGVnqO1QXDZ443vK9Xd6cU2Xos1\n/TTTRelbPy+C27dicO1myi24BU6W0AsodGYU6HqsT4JlwyeCe3g+ePZHak4PqFWu\nCeykeCc6+zFxT4hm7j9/l/JCuwKBgQDKovMgbTSWuOtUIIJwX+VpCy2ARzCvcuos\narXQo6Km4yWioY5DIbyiVCsOKo0d+qHehczj9atCfnCiBTpHw4A829zd65xBg9j4\n5p8Jprmli/dMGynAgnNl4qDk9UiFjvX3fqjN+6q83DdyQe8aoyRkzKK73J7+r+fz\n1Oyun/s06QKBgQCNQox/OvX3r9LhXMr5H/GUN+25zj3emzmuAKP7gJoVpYs/ULzR\nH0u+2PattpIWT0ggAnuURqJOngi2sqiIzv4ZHaAEM5uML2VHcl6krzPxobl8fhTz\ngfV6/UmJP9V9vdVqZmXmRBz1lqqA5p7cOrI25oCE1UIG2m3TZa3MmPNUBQKBgQCL\n4FXBwYB2tmlDpjlERv3+N8gN75Zs1f9N789XmU0ytEOLcsfYEVa8GyupWLgWxKau\nC2B2z2OLv+oR/VfQp+RCnmZlDjnLg67niZKov90QqIBpmaqFh8cOwpTb13FbOGcT\nk+wEXD/spHrltRvPIGSD7Do9QbrDBjwwNX+3vxlR2QKBgGRGOKhD3WlUbpDofCkr\nKmBXxpPzBN98EEBwqFUWUfEukDkW1Z3U9r/fLik4AEx5PzPLqmKa7+dB5M0Bj1C0\nL89ZuFkmgTu7HwZLm18z7OO0WZ1BLe/EbaVFeUNLTQ+kkwGlUufkr5KaNH1WppMh\nCzjMTpLiy8LchEeY6XHu2zcy\n-----END PRIVATE KEY-----\n",
+  "client_email": "kayla-charky@harmlessbuddy.iam.gserviceaccount.com",
+  "client_id": "100530064083180154123",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kayla-charky%40harmlessbuddy.iam.gserviceaccount.com"
+}
