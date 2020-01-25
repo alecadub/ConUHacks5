@@ -10,11 +10,13 @@ export class ApiService {
   private httpHeaders = new HttpHeaders({ 'Content-Type': 'application/json' });
   constructor(public httpClient: HttpClient) {}
 
-  get(route: string): Observable<any> {
+  public get(route: string): Observable<any> {
     return this.httpClient.get(this.djangoURL + route + '/');
   }
 
-  post(route: string): Observable<any> {
-    return this.httpClient.post();
+  public post(route: string, body: any): Observable<any> {
+    return this.httpClient.post(this.djangoURL + route + '/', body, {
+      headers: this.httpHeaders
+    });
   }
 }

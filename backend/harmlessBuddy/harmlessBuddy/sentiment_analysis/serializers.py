@@ -1,26 +1,27 @@
-from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from .models import Report
 from .models import MoodyMessage
 
 
-class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = MoodyMessage
-        fields = ['message', 'mood']
-
-
 class ReportSerializer(serializers.HyperlinkedModelSerializer):
-    moody_message = MoodyMessageSerializer(many=True)
-
     class Meta:
         model = Report
-        fields = ['data', 'moody_message']
+        fields = ['name']
+
+
+class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
+    report = ReportSerializer()
+
+    class Meta:
+        model = MoodyMessage
+        fields = ['message', 'mood', 'report']
 
     def create(self, validated_data):
-        data = validated_data.pop('moody_message')
-        report = Report.objects.create(**validated_data)
-        for moody_message in data:
-            MoodyMessage.objects.create(**moody_message)
-        Report.objects.create(**data)
-        return report
+        report = validated_data.pop('report')
+        report_object = Report.objects.create(name=report['name'])
+        moody_message = MoodyMessage.objects.create(
+            report=report_object,
+            message=validated_data['message'],
+            mood=validated_data['mood']
+        )
+        return moody_message
