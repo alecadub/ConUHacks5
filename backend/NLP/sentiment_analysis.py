@@ -20,7 +20,8 @@ def print_result(annotations):
             index, sentence_sentiment))
 
     print('Overall Sentiment: score of {} with magnitude of {}'.format(score, magnitude))
-
+    f= open("AnaysisResult.txt", "w+")
+    f.write(score)
 
     return 0
 
