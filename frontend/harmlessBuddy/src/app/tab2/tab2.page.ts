@@ -12,6 +12,17 @@ export class Tab2Page {
   constructor(public api: ApiService) {}
 
   ngOnInit() {
+    // this.api
+    //   .post('moody_messages', {
+    //     message: 'test',
+    //     mood: 'test',
+    //     report: {
+    //       name: 'holla'
+    //     }
+    //   })
+    //   .subscribe(data => {
+    //     console.log(data);
+    //   });
     this.getAllMoodyMessages();
   }
 
