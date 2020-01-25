@@ -1,5 +1,5 @@
-import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="apikey.json"
+# import os
+# os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="apikey.json"
 
 """Demonstrates how to make a simple call to the Natural Language API."""
 
@@ -19,8 +19,9 @@ def print_result(annotations):
         print('Sentence {} has a sentiment score of {}'.format(
             index, sentence_sentiment))
 
-    print('Overall Sentiment: score of {} with magnitude of {}'.format(
-        score, magnitude))
+    print('Overall Sentiment: score of {} with magnitude of {}'.format(score, magnitude))
+
+
     return 0
 
 
