@@ -21,6 +21,7 @@ from harmlessBuddy.sentiment_analysis import views
 
 router = routers.DefaultRouter()
 router.register(r'reports', views.ReportViewSet)
+router.register(r'moody_messages', views.MoodyMessageViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
