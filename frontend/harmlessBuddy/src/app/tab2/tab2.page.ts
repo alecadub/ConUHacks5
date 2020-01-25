@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../services/api';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  moodyMessages: any;
 
-  constructor() {}
+  constructor(public api: ApiService) {}
 
+  ngOnInit() {
+    this.getAllMoodyMessages();
+  }
+
+  public getAllMoodyMessages() {
+    return this.api.get('moody_messages').subscribe(
+      data => {
+        console.log(data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
 }
