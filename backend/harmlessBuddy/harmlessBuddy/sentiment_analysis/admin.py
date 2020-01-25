@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Report
+from .models import MoodyMessage
 
-# Register your models here.
+admin.site.register(Report)
+admin.site.register(MoodyMessage)
