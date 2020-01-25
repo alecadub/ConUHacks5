@@ -13,4 +13,10 @@ export class ApiService {
   get(route: string): Observable<any> {
     return this.httpClient.get(this.djangoURL + route + '/');
   }
+
+  post(route: string, body: any): Observable<any> {
+    return this.httpClient.post(this.djangoURL + route + '/' + body + '/', {
+      headers: this.httpHeaders
+    });
+  }
 }
