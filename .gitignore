@@ -5,4 +5,3 @@ backend/.idea/
 
 backend/NLP/apikey.json
 backend/harmlessBuddy/harmlessBuddy/sentiment_analysis/apikey.json
-backend/harmlessBuddy/db.sqlite3
