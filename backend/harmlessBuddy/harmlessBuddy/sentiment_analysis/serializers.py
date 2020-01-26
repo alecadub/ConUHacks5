@@ -23,7 +23,7 @@ class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = MoodyMessage
-        fields = ['message', 'mood', 'report']
+        fields = ['message', 'mood', 'report', 'score']
 
     def create(self, validated_data):
         report = validated_data.pop('report')
@@ -34,11 +34,11 @@ class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
         else:
             final_report = existing_report[0]
 
-        text_score = analyze(validated_data['message'])
+        text_score = round(analyze(validated_data['message']), 2)
 
         text_mood = "Bad"
 
-        if text_score > 0.5:
+        if text_score > 0.2:
             text_mood = "Good"
         elif text_score == 'None':
             text_mood = "Neutral"
@@ -48,7 +48,9 @@ class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
         moody_message = MoodyMessage.objects.create(
             report=final_report,
             message=validated_data['message'],
-            mood=text_mood
+            mood=text_mood,
+            confidence='0.95',
+            score=text_score
         )
         return moody_message
 

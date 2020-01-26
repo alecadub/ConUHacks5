@@ -15,6 +15,7 @@ export class Tab2Page {
   public vSearch: any;
   public reportName: any;
   public lastMessage: any;
+  public confidence: any;
   constructor(public api: ApiService) {}
 
   ngOnInit() {
@@ -32,6 +33,7 @@ export class Tab2Page {
       this.vSearch.onresult = data => {
         voiceHandler.value = data.results[0][0].transcript;
         this.speechToText = data.results[0][0].transcript;
+        this.confidence = data.results[0][0].confidence;
       };
       this.vSearch.onerror = e => {
         console.log(e);
@@ -46,6 +48,7 @@ export class Tab2Page {
   public sendData() {
     if (this.lastMessage !== this.speechToText) {
       console.log('new: ' + this.speechToText);
+      console.log(this.confidence.toFixed(2).toString());
       setTimeout(() => {
         this.api
           .post('moody_messages', {
@@ -53,7 +56,9 @@ export class Tab2Page {
             mood: 'mock',
             report: {
               name: this.reportName
-            }
+            },
+            confidence: this.confidence.toFixed(2).toString(),
+            score: 0.0
           })
           .subscribe(data => {});
       }, 5000);
