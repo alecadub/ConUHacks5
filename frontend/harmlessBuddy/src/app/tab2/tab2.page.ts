@@ -35,9 +35,9 @@ export class Tab2Page {
   }
 
   public voiceStop() {
-    this.vSearch.stop();
+    // this.vSearch.stop();
     this.api.post('reports', {
-      message: this.speechToText,
+      message: 'This is a test Good good good good extra. Bad very bad I hate you bad bad ',
       report: {
         name: 'Meeting' + new Date()
       }

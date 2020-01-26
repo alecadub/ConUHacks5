@@ -37,9 +37,10 @@ def analyze(content):
     # Print the results
     print_result(annotations)
 
+
 def getText(filename):
     """Run a sentiment analysis request on text within a passed filename."""
-    
+
     with open(filename, 'r') as review_file:
         # Instantiates a plain text document.
         content = review_file.read()

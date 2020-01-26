@@ -29,6 +29,7 @@ import io
 from google.cloud import speech_v1
 from google.cloud.speech_v1 import enums
 
+
 def sample_long_running_recognize(local_file_path):
     """
     Transcribe a long audio file using asynchronous speech recognition
@@ -72,7 +73,6 @@ def sample_long_running_recognize(local_file_path):
 
     text2save = response.results[0].alternatives[0].transcript
     return text2save
-
 
 
 # [END speech_transcribe_async]
