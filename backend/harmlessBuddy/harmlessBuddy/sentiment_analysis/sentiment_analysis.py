@@ -8,6 +8,9 @@ import argparse
 from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
+import io
+from google.cloud import speech_v1
+from google.cloud.speech_v1 import enums
 
 
 def print_result(annotations):

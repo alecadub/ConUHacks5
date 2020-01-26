@@ -35,12 +35,17 @@ export class Tab2Page {
   }
 
   public voiceStop() {
-    // this.vSearch.stop();
-    this.api.post('reports', {
-      message: 'This is a test Good good good good extra. Bad very bad I hate you bad bad ',
-      report: {
-        name: 'Meeting' + new Date()
-      }
-    });
+    this.vSearch.stop();
+    this.api
+      .post('moody_messages', {
+        message: this.speechToText,
+        mood: 'mock',
+        report: {
+          name: 'Meeting ' + new Date()
+        }
+      })
+      .subscribe(data => {
+        console.log(data);
+      });
   }
 }
