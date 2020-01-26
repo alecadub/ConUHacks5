@@ -1,13 +1,57 @@
 <ng-container *ngFor="let moodyMessage of moodyMessages">
   <ng-container *ngIf="moodyMessage.report.name === reportName">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>{{moodyMessage.mood}}</ion-card-title>
-      </ion-card-header>
+    <ng-container *ngIf="moodyMessage.mood === 'Good'">
+      <ion-card class="green">
+        <ion-card-header>
+          <ion-card-title>Mood: {{moodyMessage.mood}}</ion-card-title>
+          <ion-card-subtitle class="white"
+            >Score: {{moodyMessage.score}}</ion-card-subtitle
+          >
+          <ion-card-subtitle class="white"
+            >Author: {{getAuthor()}}</ion-card-subtitle
+          >
+        </ion-card-header>
 
-      <ion-card-content>
-        {{moodyMessage.message}}
-      </ion-card-content>
-    </ion-card>
+        <ion-card-content class="white">
+          Message: {{moodyMessage.message}}
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+
+    <ng-container *ngIf="moodyMessage.mood === 'Bad'">
+      <ion-card class="red">
+        <ion-card-header>
+          <ion-card-title>Mood: {{moodyMessage.mood}}</ion-card-title>
+          <ion-card-subtitle class="white"
+            >Score: {{moodyMessage.score}}</ion-card-subtitle
+          >
+          <ion-card-subtitle class="white"
+            >Author: {{getAuthor()}}</ion-card-subtitle
+          >
+        </ion-card-header>
+
+        <ion-card-content class="white">
+          Message: {{moodyMessage.message}}
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
+
+    <ng-container *ngIf="moodyMessage.mood === 'Neutral'">
+      <ion-card class="grey">
+        <ion-card-header>
+          <ion-card-title>Mood: {{moodyMessage.mood}}</ion-card-title>
+          <ion-card-subtitle class="white"
+            >Score: {{moodyMessage.score}}</ion-card-subtitle
+          >
+          <ion-card-subtitle class="white"
+            >Author: {{getAuthor()}}</ion-card-subtitle
+          >
+        </ion-card-header>
+
+        <ion-card-content class="white">
+          Message: {{moodyMessage.message}}
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
   </ng-container>
 </ng-container>
