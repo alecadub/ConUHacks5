@@ -8,6 +8,8 @@
 
 <ion-card *ngFor="let report of reports" (click)="navigateTo($event, report)">
   <ion-card-header>
-    <ion-card-title>{{report.name}}</ion-card-title>
+    <ion-card-title
+      >{{report.name}}<ion-icon name="folder"></ion-icon
+    ></ion-card-title>
   </ion-card-header>
 </ion-card>
