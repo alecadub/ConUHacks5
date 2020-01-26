@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ApiService } from '../services/api';
 declare var webkitSpeechRecognition: any;
+declare var require: any;
 var random_name = require('node-random-name');
 @Component({
   selector: 'app-tab2',
@@ -24,19 +25,17 @@ export class Tab2Page {
       this.vSearch.lang = 'en-US';
       this.vSearch.start();
       const voiceHandler = this.hiddenSearchHandler.nativeElement;
-      this.vSearch.onresult = function(data) {
+      this.vSearch.onresult = data => {
         voiceHandler.value = data.results[0][0].transcript;
-        this.speechToText =
-          this.speechToText + data.results[0][0].transcript + '.';
+        this.speechToText = data.results[0][0].transcript;
       };
-      this.vSearch.onerror = function(e) {
+      this.vSearch.onerror = e => {
         console.log(e);
       };
     }
   }
 
   public voiceStop() {
-    this.vSearch.stop();
     this.api
       .post('moody_messages', {
         message: this.speechToText,
