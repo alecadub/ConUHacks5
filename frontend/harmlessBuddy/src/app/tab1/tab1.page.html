@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-card *ngFor="let report of reports">
+<ion-card *ngFor="let report of reports" (click)="navigateTo($event, report)">
   <ion-card-header>
     <ion-card-title>{{report.name}}</ion-card-title>
   </ion-card-header>

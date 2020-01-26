@@ -1,0 +1,13 @@
+<ng-container *ngFor="let moodyMessage of moodyMessages">
+  <ng-container *ngIf="moodyMessage.report.name === reportName">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{moodyMessage.mood}}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{moodyMessage.message}}
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+</ng-container>
