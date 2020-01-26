@@ -2,29 +2,21 @@ ion-icon {
   font-size: 40px; //Preferred size here
 }
 
-.round-button-circle {
-    padding-bottom: 40px;
-    margin-right: 50px;  
-    padding-right: 150px;
+.logo {
+  padding-top: 20%;
 }
 
-.buttonStyle {
-  padding-left:43%;
+.bottom {
+  position: fixed;
+  left: 0;
+  bottom: 10%;
+  right: 0;
 }
 
-.buttonVoice {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    background-color: #ff6961;
-    position: absolute;
-    top: 40%;
-}
-
-.buttonStop {
-    position: absolute;
-    top: 70%;
-    background-color: white;
-    height: 100px;
-    width: 100px;
+.redButton {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  background-color: #ff6961;
+  color: white;
 }

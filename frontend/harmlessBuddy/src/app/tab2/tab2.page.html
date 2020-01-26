@@ -1,28 +1,36 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Recording
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Recording
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
-<form
-  id="gSearch"
-  method="GET"
-  #gSearch
-  action="https://google.com/search?q=searchphrase"
->
-  <div class ="buttonStyle" id="voicesearch">
-    <input #searchKey name="q" type="hidden" />
-    <div class="round-button-circle">
-      <button class="buttonVoice" (click)="voiceSearch()" primary large>
-        <ion-icon name="md-microphone"></ion-icon>
-      </button>
-    </div>
-    <div class="stopButton">
-      <button class="buttonStop" (click)="voiceStop()" primary medium>
-        <ion-icon name="md-pause"></ion-icon>
-      </button>
-    </div>
-  </div>
-</form>
-<!-- <ion-progress-bar value="0.5" type="indeterminate" reversed="true"></ion-progress-bar> -->
+<ion-content style="height: 100%">
+    <form
+            id="gSearch"
+            method="GET"
+            #gSearch
+            action="https://google.com/search?q=searchphrase"
+    >
+        <ion-grid class="logo">
+            <ion-row class="ion-justify-content-center">
+                <ion-col size="6">
+                    <img src="assets/img/logo.jpg">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+        <ion-grid class="bottom">
+            <ion-row class="ion-justify-content-center" style="text-align: center">
+                <ion-col>
+                    <input #searchKey name="q" type="hidden"/>
+                    <button class="redButton" (click)="voiceSearch()" primary large>
+                        <ion-icon name="md-microphone"></ion-icon>
+                    </button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </form>
+
+    <!-- <ion-progress-bar value="0.5" type="indeterminate" reversed="true"></ion-progress-bar> -->
+</ion-content>
