@@ -25,7 +25,6 @@ class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
         # Validated_data is a audio file
         # Get Text from Audio
         # text = speech2text.sample_long_running_recognize(validated_data)
-        print('Text from Speech: ', text)
         # Get Sentiment of text 
         # text_sentiment = sentiment_analysis.analyze(text)
 
@@ -41,7 +40,7 @@ class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
 
         moody_message = MoodyMessage.objects.create(
             report=final_report,
-            message=text,
+            message=validated_data['message'],
             mood=text_mood
         )
         return moody_message

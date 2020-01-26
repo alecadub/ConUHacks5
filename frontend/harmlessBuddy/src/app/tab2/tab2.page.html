@@ -13,6 +13,11 @@
 >
   <div id="voicesearch">
     <input #searchKey name="q" type="hidden" />
-    <ion-icon (click)="voiceSearch()" name="mic"></ion-icon>
+    <button (click)="voiceSearch()" primary large>
+      <ion-icon name="md-play"></ion-icon>
+    </button>
+    <button (click)="voiceStop()" primary large>
+      <ion-icon name="md-pause"></ion-icon>
+    </button>
   </div>
 </form>

@@ -9,27 +9,38 @@ declare var webkitSpeechRecognition: any;
 export class Tab2Page {
   @ViewChild('gSearch', { static: false }) formSearch;
   @ViewChild('searchKey', { static: false }) hiddenSearchHandler;
+  public speechToText = '';
+  public vSearch: any;
   constructor(public api: ApiService) {}
 
   ngOnInit() {}
 
   public voiceSearch() {
     if ('webkitSpeechRecognition' in window) {
-      const vSearch = new webkitSpeechRecognition();
-      console.log(vSearch);
-      vSearch.continuous = false;
-      vSearch.interimresults = false;
-      vSearch.lang = 'en-US';
-      vSearch.start();
+      this.vSearch = new webkitSpeechRecognition();
+      this.vSearch.continuous = false;
+      this.vSearch.interimresults = false;
+      this.vSearch.lang = 'en-US';
+      this.vSearch.start();
       const voiceHandler = this.hiddenSearchHandler.nativeElement;
-      vSearch.onresult = function(data) {
+      this.vSearch.onresult = function(data) {
         voiceHandler.value = data.results[0][0].transcript;
-        console.log(data.results[0][0].transcript);
-        vSearch.stop();
+        this.speechToText =
+          this.speechToText + data.results[0][0].transcript + '.';
       };
-      vSearch.onerror = function(e) {
+      this.vSearch.onerror = function(e) {
         console.log(e);
       };
     }
+  }
+
+  public voiceStop() {
+    this.vSearch.stop();
+    this.api.post('reports', {
+      message: this.speechToText,
+      report: {
+        name: 'Meeting' + new Date()
+      }
+    });
   }
 }
