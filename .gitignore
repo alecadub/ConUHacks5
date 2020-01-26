@@ -2,3 +2,5 @@
 backend/.idea/
 
 *.pyc
+
+backend/NLP/apikey.json
