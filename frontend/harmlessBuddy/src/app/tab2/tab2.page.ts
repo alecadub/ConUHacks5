@@ -14,6 +14,7 @@ export class Tab2Page {
   public speechToText;
   public vSearch: any;
   public reportName: any;
+  public lastMessage: any;
   constructor(public api: ApiService) {}
 
   ngOnInit() {
@@ -35,22 +36,34 @@ export class Tab2Page {
       this.vSearch.onerror = e => {
         console.log(e);
       };
+      this.vSearch.onend = () => {
+        this.voiceStop();
+        this.vSearch.start();
+      };
+    }
+  }
+
+  public sendData() {
+    console.log('last: ' + this.lastMessage);
+    if (this.lastMessage !== this.speechToText) {
+      console.log('new: ' + this.speechToText);
+      setTimeout(() => {
+        this.api
+          .post('moody_messages', {
+            message: this.speechToText,
+            mood: 'mock',
+            report: {
+              name: this.reportName
+            }
+          })
+          .subscribe(data => {});
+      }, 5000);
+      this.lastMessage = this.speechToText;
     }
   }
 
   public voiceStop() {
-    setTimeout(() => {
-      this.vSearch.stop();
-      this.api
-        .post('moody_messages', {
-          message: this.speechToText,
-          mood: 'mock',
-          report: {
-            name: this.reportName
-          }
-        })
-        .subscribe(data => {
-        });
-    }, 5000);
+    this.sendData();
+    this.vSearch.stop();
   }
 }
