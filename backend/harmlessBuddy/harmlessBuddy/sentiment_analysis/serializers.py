@@ -38,9 +38,9 @@ class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
 
         text_mood = "Bad"
 
-        if text_score > 0.2:
+        if text_score > 0.5:
             text_mood = "Good"
-        elif text_score == 'None':
+        elif 0.19 < text_score < 0.5:
             text_mood = "Neutral"
         else:
             text_mood = "Bad"
