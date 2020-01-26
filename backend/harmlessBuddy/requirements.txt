@@ -103,7 +103,7 @@ pyOpenSSL==17.5.0
 pyparsing==2.2.0
 pyserial==3.4
 python-dateutil==2.6.1
-python-gnupg==0.4.1
+python-gnupg==0.4.4
 python-qt-binding==0.3.4
 python-snappy==0.5
 PyTrie==0.2
