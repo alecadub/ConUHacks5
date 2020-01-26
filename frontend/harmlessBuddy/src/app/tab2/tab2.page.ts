@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { ApiService } from '../services/api';
 declare var webkitSpeechRecognition: any;
+var random_name = require('node-random-name');
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -41,7 +42,7 @@ export class Tab2Page {
         message: this.speechToText,
         mood: 'mock',
         report: {
-          name: 'Meeting ' + new Date()
+          name: random_name()
         }
       })
       .subscribe(data => {
