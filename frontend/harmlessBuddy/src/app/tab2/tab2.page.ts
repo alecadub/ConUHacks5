@@ -44,7 +44,6 @@ export class Tab2Page {
   }
 
   public sendData() {
-    console.log('last: ' + this.lastMessage);
     if (this.lastMessage !== this.speechToText) {
       console.log('new: ' + this.speechToText);
       setTimeout(() => {
