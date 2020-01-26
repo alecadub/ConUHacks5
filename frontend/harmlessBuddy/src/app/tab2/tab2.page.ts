@@ -16,6 +16,7 @@ export class Tab2Page {
   public reportName: any;
   public lastMessage: any;
   public confidence: any;
+  public clicked = false;
   constructor(public api: ApiService) {}
 
   ngOnInit() {
@@ -23,6 +24,7 @@ export class Tab2Page {
   }
 
   public voiceSearch() {
+    this.clicked = true;
     if ('webkitSpeechRecognition' in window) {
       this.vSearch = new webkitSpeechRecognition();
       this.vSearch.continuous = false;

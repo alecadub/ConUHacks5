@@ -1,36 +1,43 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-title>
-            Recording
-        </ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>
+      Recording
+    </ion-title>
+  </ion-toolbar>
 </ion-header>
 <ion-content style="height: 100%">
-    <form
-            id="gSearch"
-            method="GET"
-            #gSearch
-            action="https://google.com/search?q=searchphrase"
-    >
-        <ion-grid class="logo">
-            <ion-row class="ion-justify-content-center">
-                <ion-col size="6">
-                    <img src="assets/img/logo.jpg">
-                </ion-col>
-            </ion-row>
-        </ion-grid>
+  <form
+    id="gSearch"
+    method="GET"
+    #gSearch
+    action="https://google.com/search?q=searchphrase"
+  >
+    <ion-grid class="logo">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6">
+          <img src="assets/img/logo.jpg" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-        <ion-grid class="bottom">
-            <ion-row class="ion-justify-content-center" style="text-align: center">
-                <ion-col>
-                    <input #searchKey name="q" type="hidden"/>
-                    <button class="redButton" (click)="voiceSearch()" primary large>
-                        <ion-icon name="md-microphone"></ion-icon>
-                    </button>
-                </ion-col>
-            </ion-row>
-        </ion-grid>
-    </form>
+    <ion-grid class="bottom">
+      <ion-row class="ion-justify-content-center" style="text-align: center">
+        <ion-col>
+          <input #searchKey name="q" type="hidden" />
+          <ng-container *ngIf="!clicked">
+            <button class="blueButton" (click)="voiceSearch()" primary large>
+              <ion-icon name="md-microphone"></ion-icon>
+            </button>
+          </ng-container>
+          <ng-container *ngIf="clicked">
+            <button class="redButton" (click)="voiceSearch()" primary large>
+              <ion-icon name="md-microphone"></ion-icon>
+            </button>
+          </ng-container>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 
-    <!-- <ion-progress-bar value="0.5" type="indeterminate" reversed="true"></ion-progress-bar> -->
+  <!-- <ion-progress-bar value="0.5" type="indeterminate" reversed="true"></ion-progress-bar> -->
 </ion-content>
