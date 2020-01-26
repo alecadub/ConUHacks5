@@ -20,19 +20,14 @@ def print_result(annotations):
             index, sentence_sentiment))
 
     print('Overall Sentiment: score of {} with magnitude of {}'.format(score, magnitude))
-    f= open("AnaysisResult.txt", "w+")
-    f.write(score)
+    # f= open("AnaysisResult.txt", "w+")
+    # f.write(score)
 
-    return 0
+    return score
 
 
-def analyze(movie_review_filename):
-    """Run a sentiment analysis request on text within a passed filename."""
+def analyze(content):
     client = language.LanguageServiceClient()
-
-    with open(movie_review_filename, 'r') as review_file:
-        # Instantiates a plain text document.
-        content = review_file.read()
 
     document = types.Document(
         content=content,
@@ -42,14 +37,23 @@ def analyze(movie_review_filename):
     # Print the results
     print_result(annotations)
 
+def getText(filename):
+    """Run a sentiment analysis request on text within a passed filename."""
+    
+    with open(filename, 'r') as review_file:
+        # Instantiates a plain text document.
+        content = review_file.read()
+
+    analyze(content)
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument(
-        'movie_review_filename',
-        help='The filename of the movie review you\'d like to analyze.')
+        'filename',
+        help='The filename of the text you would like to analyse.')
     args = parser.parse_args()
 
-    analyze(args.movie_review_filename)
+    getText(args.filename)

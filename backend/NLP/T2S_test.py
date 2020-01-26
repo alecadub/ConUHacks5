@@ -62,14 +62,16 @@ def sample_long_running_recognize(local_file_path):
 
     print(u"Printing to file")
     response = operation.result()
-    f= open("textfile.txt", "w+")
-    text2save = response.results[0].alternatives[0].transcript
-    for word in text2save.split():
-        f.write(word + " ")
+    # f= open("textfile.txt", "w+")
+    # for word in text2save.split():
+    #     f.write(word + " ")
     for result in response.results:
         # First alternative is the most probable result
         alternative = result.alternatives[0]
         print(u"Transcript: {}".format(alternative.transcript))
+        
+    text2save = response.results[0].alternatives[0].transcript
+    return text2save
 
 
 
