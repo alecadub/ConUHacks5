@@ -5,5 +5,14 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content></ion-content>
+<form
+  id="gSearch"
+  method="GET"
+  #gSearch
+  action="https://google.com/search?q=searchphrase"
+>
+  <div id="voicesearch">
+    <input #searchKey name="q" type="hidden" />
+    <ion-icon (click)="voiceSearch()" name="mic"></ion-icon>
+  </div>
+</form>
