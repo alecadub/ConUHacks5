@@ -11,11 +11,14 @@ var random_name = require('node-random-name');
 export class Tab2Page {
   @ViewChild('gSearch', { static: false }) formSearch;
   @ViewChild('searchKey', { static: false }) hiddenSearchHandler;
-  public speechToText = '';
+  public speechToText;
   public vSearch: any;
+  public reportName: any;
   constructor(public api: ApiService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.reportName = random_name();
+  }
 
   public voiceSearch() {
     if ('webkitSpeechRecognition' in window) {
@@ -36,16 +39,18 @@ export class Tab2Page {
   }
 
   public voiceStop() {
-    this.api
-      .post('moody_messages', {
-        message: this.speechToText,
-        mood: 'mock',
-        report: {
-          name: random_name()
-        }
-      })
-      .subscribe(data => {
-        console.log(data);
-      });
+    setTimeout(() => {
+      this.vSearch.stop();
+      this.api
+        .post('moody_messages', {
+          message: this.speechToText,
+          mood: 'mock',
+          report: {
+            name: this.reportName
+          }
+        })
+        .subscribe(data => {
+        });
+    }, 5000);
   }
 }
