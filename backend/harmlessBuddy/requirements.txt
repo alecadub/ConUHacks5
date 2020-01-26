@@ -85,7 +85,7 @@ numpy==1.13.3
 oauth==1.0.1
 olefile==0.45.1
 PAM==0.4.2
-paramiko==2.0.0
+paramiko==2.0.9
 Pillow==5.1.0
 protobuf==3.11.2
 psutil==5.4.2
