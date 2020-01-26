@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "harmlessbuddy",
+    "private_key_id": "fbe953ab166bc8262b0b36e6ceb0bcc76226dd53",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCZkctlBaueIfrW\nLVi8l1CbsO1dse3i507t/p3Fj3XPdKdNzJhEVfS1kSWri60I0OJ/9fsZ7IjU8C8J\noORSwmytryRPF3sD8gltvm4oDZnnQPFjFDqCtGbyexHjvXACZAS3c5zKTnSKwQD/\nnu6LcQ1Sc1WLiBkhxjTa3hiyPcqHl1u0lAo1dYipcmx3ZKoLN862o0PYaOeSQGXW\nxPTv7e+5fAldtSeifXEjOPaqXBFIHdguqygfoP7dSIwepRxPuHzthu99wxc7q2NX\nZkFc264d0MjpQqm7plvWmabx42ZZjHbCaMivhE9QaYB74c6BG0UaYeIR7BOnM9vH\nFEGxMIV1AgMBAAECggEACMBSLZOWersc/Do2paifI1WAcVJuZ/vJIlmGzCH8vgcR\nHFHdwNHVJsj6sz07wxYu53Pbt1fPWbMbkG+RaKtDs4duM5j28vvxUEZbKKp9wWaQ\nsEC62i/wSJPS1SjlH9MV9w5Tj652MwyvQzc0s3rhyM0MbEMj4NTWtjzp0150vX0/\n+cMArQ4Oxw7c2fchi5xTZN63htIgtihsnJBUTAirhspG1t0dMD8vGdAuXYyMajs9\nOfUNXznu1ztAQ4lJdGCfaiH1RM4tDqcAFAeTRdGM+x1uGc2yro4VJHhMIKH8hoqU\nGPV2HAg5xhgjdYKH4MqW/G2t7AXQfkaNNWlsnYocgQKBgQDROXSdNW3wbc4geyM+\nhgR7QRn2eIHytOllPJC2wu/YxySv2j+1JTr12KuDESSRl5W4tI9WWly1/WuHneJj\nJ4PVjjJhKK5BpPYs2VEgxPXspiwN+3syhxdltCVWYLPkjegFAaJU8ngB5erhv/kL\n4Lm5aY2bZUhKNSrWoOjXPBpPTQKBgQC75wo81JysQ3sVXYCESJFwzoCvEBdtq6JO\nOJ7AY9rurZRKWuHW1xOMfyeIaNn1ICZd0YKAxlHaNKB06WTiFGnE4x7bMI+iWabE\nlpmzAWdBMXgLrxhov1YiSWG4a6jkjuzsWMBNESewVIUYFhJu3OYVxBFxDor7tQCl\npJKN5gxKyQKBgQCMHF3rqYwmJmKTfeLsS/NUVxR76decIWrrUNPYkFLuaO44lX90\nX6pMWP0CmMhUd57cQo561aigd0U7XI/utteie8dhKU0IyN/SyPV7bGsEP4PhGTg3\nbiBNC4a1gaz2sdFfCOkc2gNjwgS5iUXOnn/Bmt4p4nm2uEQn1zoWaTl1QQKBgQCf\n0mk7yl+kihUj3A7W9V53w71iqd4zkxwPSkuFOqnZ/1w1Tk3vTaq8At9eQEi7HWhk\nvjIxU/4FCmQ8bNQ5E8HPDJuPNiPFpFmbtrjur8/ifLAtx/WMCsq5iQ8MLM5P8V2F\nvgt6wY+vhIRcM1HkaBFwDAAF2KfQZmkxeuSIu1ZTOQKBgA4VrYfuJzCvxy+G4kDy\nwyHp260r02mHyXhJFcJnYv83XBjW3+eVcpS+LfI62FrAQF8DKxMjT75dBeJHbFcY\nKX/iEFH8vpOdFYlpEudESxvigi2E2FesSr7L/rmsj0gXgpde7gSuA+iQVt2N0BAD\nr+sR9fUdit33ezWd8tcKvkWg\n-----END PRIVATE KEY-----\n",
+    "client_email": "harmlessbuddy@harmlessbuddy.iam.gserviceaccount.com",
+    "client_id": "101551462435287834694",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/harmlessbuddy%40harmlessbuddy.iam.gserviceaccount.com"
+}

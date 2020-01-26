@@ -36,11 +36,16 @@ export class Tab2Page {
 
   public voiceStop() {
     this.vSearch.stop();
-    this.api.post('reports', {
-      message: this.speechToText,
-      report: {
-        name: 'Meeting' + new Date()
-      }
-    });
+    this.api
+      .post('moody_messages', {
+        message: this.speechToText,
+        mood: 'mock',
+        report: {
+          name: 'Meeting ' + new Date()
+        }
+      })
+      .subscribe(data => {
+        console.log(data);
+      });
   }
 }

@@ -8,6 +8,9 @@ import argparse
 from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
+import io
+from google.cloud import speech_v1
+from google.cloud.speech_v1 import enums
 
 
 def print_result(annotations):
@@ -37,9 +40,10 @@ def analyze(content):
     # Print the results
     print_result(annotations)
 
+
 def getText(filename):
     """Run a sentiment analysis request on text within a passed filename."""
-    
+
     with open(filename, 'r') as review_file:
         # Instantiates a plain text document.
         content = review_file.read()

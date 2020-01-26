@@ -4,3 +4,5 @@ backend/.idea/
 *.pyc
 
 backend/NLP/apikey.json
+
+backend/harmlessBuddy/harmlessBuddy/sentiment_analysis/apikey.json
