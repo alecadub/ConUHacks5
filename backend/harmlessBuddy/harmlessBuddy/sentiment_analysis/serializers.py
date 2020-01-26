@@ -18,9 +18,15 @@ class MoodyMessageSerializer(serializers.HyperlinkedModelSerializer):
 
     def create(self, validated_data):
         report = validated_data.pop('report')
-        report_object = Report.objects.create(name=report['name'])
+        existing_report = Report.objects.filter(name=report['name'])
+
+        if len(existing_report) < 1:
+            final_report = Report.objects.create(name=report['name'])
+        else:
+            final_report = existing_report[0]
+
         moody_message = MoodyMessage.objects.create(
-            report=report_object,
+            report=final_report,
             message=validated_data['message'],
             mood=validated_data['mood']
         )
