@@ -26,7 +26,6 @@ export class ReportMessagesPage implements OnInit {
         this.moodyMessages = data;
         this.reportName = this.communicationService.lastReportNameConsulted;
         console.log(this.moodyMessages);
-        console.log(this.reportName);
       },
       error => {
         console.log(error);

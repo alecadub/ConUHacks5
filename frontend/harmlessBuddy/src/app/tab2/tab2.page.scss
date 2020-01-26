@@ -1,1 +1,30 @@
+ion-icon {
+  font-size: 40px; //Preferred size here
+}
 
+.round-button-circle {
+    padding-bottom: 40px;
+    margin-right: 50px;  
+    padding-right: 150px;
+}
+
+.buttonStyle {
+  padding-left:43%;
+}
+
+.buttonVoice {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: #ff6961;
+    position: absolute;
+    top: 40%;
+}
+
+.buttonStop {
+    position: absolute;
+    top: 70%;
+    background-color: white;
+    height: 100px;
+    width: 100px;
+}

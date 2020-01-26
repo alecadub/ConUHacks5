@@ -11,13 +11,18 @@
   #gSearch
   action="https://google.com/search?q=searchphrase"
 >
-  <div id="voicesearch">
+  <div class ="buttonStyle" id="voicesearch">
     <input #searchKey name="q" type="hidden" />
-    <button (click)="voiceSearch()" primary large>
-      <ion-icon name="md-play"></ion-icon>
-    </button>
-    <button (click)="voiceStop()" primary large>
-      <ion-icon name="md-pause"></ion-icon>
-    </button>
+    <div class="round-button-circle">
+      <button class="buttonVoice" (click)="voiceSearch()" primary large>
+        <ion-icon name="md-microphone"></ion-icon>
+      </button>
+    </div>
+    <div class="stopButton">
+      <button class="buttonStop" (click)="voiceStop()" primary medium>
+        <ion-icon name="md-pause"></ion-icon>
+      </button>
+    </div>
   </div>
 </form>
+<!-- <ion-progress-bar value="0.5" type="indeterminate" reversed="true"></ion-progress-bar> -->
